@@ -55,7 +55,7 @@ If you're a developer or prefer to build the application yourself, follow these 
 1. **Clone the Repository:**
 
    ```sh
-   git clone https://github.com/nicocodes9/electron-clock-widget.git
+   git clone https://github.com/nicocodes9/desktop-clock-widget.git
    cd electron-clock-widget
    ```
 
