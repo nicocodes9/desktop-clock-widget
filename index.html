@@ -1,0 +1,86 @@
+<!-- index.html - Your Clock Widget -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <title>Stylized Clock</title> -->
+    <style>
+      /* Important: Ensure your font file is in the same directory as index.html
+         or provide the correct relative path (e.g., url("fonts/Anurati-Regular.otf")) */
+      @font-face {
+        font-family: "CustomFont";
+        src: url("Anurati-Regular.otf") format("opentype");
+      }
+
+      body {
+        margin: 0;
+        background: transparent; /* transparent background */
+        color: white;
+        font-family: "CustomFont", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Use 100vh to fill the window height */
+        width: 100vw; /* Use 100vw to fill the window width */
+        text-align: center;
+        /* Optional: Add a subtle text shadow for better visibility on varying wallpapers */
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+      }
+
+      .day {
+        font-size: 4.5em;
+        letter-spacing: 0.1em;
+      }
+
+      .date {
+        font-size: 2em;
+        margin-top: 0.5em;
+      }
+
+      .time {
+        font-size: 1.4em;
+        margin-top: 0.5em;
+        padding: 0.2em 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="day" id="day">SATURDAY</div>
+    <div class="date" id="date">27 MARCH, 2021.</div>
+    <div class="time" id="time">- 00:15 -</div>
+
+    <script>
+      function updateClock() {
+        const now = new Date();
+        const options = {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        };
+        const day = now
+          .toLocaleDateString("en-US", { weekday: "long" })
+          .toUpperCase();
+        const date = now
+          .toLocaleDateString("en-US", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })
+          .toUpperCase();
+        const time = now.toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+
+        document.getElementById("day").textContent = day;
+        document.getElementById("date").textContent = date;
+        document.getElementById("time").textContent = `- ${time} -`;
+      }
+
+      // Update clock immediately on load and then every minute
+      updateClock();
+      setInterval(updateClock, 60000);
+    </script>
+  </body>
+</html>
