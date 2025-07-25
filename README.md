@@ -19,9 +19,11 @@ A minimalist, transparent, and undraggable clock widget for your Windows desktop
 
 ## 📸 Screenshots
 
-|              Desktop View 1               |              Desktop View 2               |
-| :---------------------------------------: | :---------------------------------------: |
-| ![Screenshot 1](screenshots/desktop1.jpg) | ![Screenshot 2](screenshots/desktop2.jpg) |
+![desktop image 1](screenshots/desktop1.jpg)
+
+---
+
+![desktop image 2](screenshots/desktop2.jpg)
 
 ---
 
