@@ -33,7 +33,7 @@ A minimalist, transparent, and undraggable clock widget for your Windows desktop
 
 The easiest way to install the app is to download the pre-built installer from the GitHub Releases page.
 
-1. Go to the [Releases](https://github.com/nicocodes9/electron-clock-widget/releases) page of this repository.
+1. Go to the [Releases](https://github.com/nicocodes9/desktop-clock-widget/releases) page of this repository.
 2. Find the latest release (e.g., `v1.0.0`).
 3. Under the "Assets" section, download the `Desktop Clock Setup.exe` file.
 4. Run the downloaded `.exe` installer and follow the on-screen instructions.
